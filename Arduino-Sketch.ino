@@ -2,6 +2,7 @@
 #include <SPI.h>
 //#include "C:\Users\David\Google Drive\UofL\CECS 596\Capstone Team\FreqMeasure-master\FreqMeasure.h"
 #include <FreqMeasure.h>
+#include <TimerOne.h>
 
 // TODO
 // - Change dp function to char array, for heap fragmentation stuff
@@ -34,11 +35,16 @@ char endMarker = '\n';                  // What symbol is considered the end of 
 const int maxCSVVals = 128;              // Max number of CSV values that we're going to hold
 const int sizeOfMaxCSVPair = 9;         // Max size of a single CSV value pair
 const int maxSerChars = (maxCSVVals/2) * sizeOfMaxCSVPair + 1;           // Max num of characters we can process in a single Serial request
+int justCameFromSeq = 0;
 
 // *** Sequencer Variables
-int BPM;                                // Beats Per Minute
-int tst;                                // Time signature Top
-long seq1vals[maxCSVVals];               // Sequencer 1 Values;
+long BPM = 100;                        // Beats Per Minute
+int tst = 4;                           // Time signature Top
+const int maxNumSeqNotes = 256;        // The maximum number of notes the sequencer will ever hold
+int numNotesForCurrentSeq;             // The number of notes for the current sequencer selection; i.e., if in 8 beat mode, would have 4 * 4 * 8 = 128 notes.
+int seq1on = 0;                        // Sequencer 1 on/off; 0 = off, 1 = on, 2 = recording
+int seq1CurrentNote = 0;               // Which note we're currently playing for seq1. 
+long seq1vals[maxNumSeqNotes];         // Sequencer 1 Values;
 
 char receivedChars[maxSerChars];        // Array to store received data
 
@@ -50,6 +56,7 @@ int OutValues[12] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};  // Output wiper value
 // Other
 long memi[16];                           // Used as reserved memory to transfer data between things. "Memory, integers"
 char m = '\0';                          // Used in main loop
+int on_t = 0;
 
 const int SlavePins [numRheo] = {23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45};                 
   // 23:  100k Rheo 0
@@ -132,15 +139,17 @@ void readSerial() {
         eod = true;
       }
     }
-    // dp("Serial: ");
-    // for (int p = 0; p < 64; p++) {
-    //   dpc(receivedChars[p]);
-    // }
-    // dp("\n");
+    dp("Serial: ");
+    for (int p = 0; p < 64; p++) {
+      dpc(receivedChars[p]);
+    }
+    dp("\n");
 }
 
 // Parses serial input to CSV values
 void parseCSV(int op) {
+
+  dp("enter parse\n");
 
   // op: 1 -> Do clear csvValues
   // op: ? -> Don't clear csvValues
@@ -158,7 +167,9 @@ void parseCSV(int op) {
   char number[7];                     // Array used for parsing CSV inputs
 
   for (int k = 0; k < maxSerChars; k++) {
+      dpc(receivedChars[k]);
       if (receivedChars[k] == ',') {
+        dp("*,*");
         number[t] = '\0';
         // dp("Number:");
         // for (int q = 0; q < 7; q++) {
@@ -174,6 +185,7 @@ void parseCSV(int op) {
         o = o + 1;
       }
       else if (receivedChars[k] == '\0') {
+        dp("*0*");
         // Add last CSV to array
         number[t] = '\0';
         // dp("Number:");
@@ -189,29 +201,37 @@ void parseCSV(int op) {
         break;
       }
       else {
+        dp("*-*");
         number[t] = receivedChars[k];
         t = t + 1;
       }
     }
 
-    // for (int l = 0; l < 12; l++) {
-    //   dp("csvValues: ");
-    //   dpi(csvValues[l]);
-    //   dp("\n");
-    // }
-    // dp("\n");
+    for (int l = 0; l < 12; l++) {
+      dp("csvValues: ");
+      dpi(csvValues[l]);
+      dp("\n");
+    }
+    dp("\n");
 
 }
 
 // Writes out the current values to the Rheostats and Transistors
 void writeAllRheostats() {
 
+  // Calculate all rheostat values  
+    for (int j = 0; j < numOsc; j++) {
+      rtows(csvValues[j]);
+      OutValues[j*2] = memi[0];
+      OutValues[j*2 + 1] = memi[1];
+    }
+
   for (int k = 0; k < numRheo; k++) {      
     digitalWrite(SlavePins[k], LOW);                // set chip select low
     SPI.transfer(0);                                // send command byte
     SPI.transfer(OutValues[k]);                     // send resistance value
     digitalWrite(SlavePins[k], HIGH);               // set chip select high
-
+    
     // dp("Writing: ");
     // dpi(OutValues[k]);
     // dp(", to ");
@@ -288,8 +308,15 @@ void rtows(long res) {
 // Play function. Call when you want to be in play mode. Will exit with mode request
 char Play() {
 
+  justCameFromSeq = 0;
+
+  Timer1.initialize(60.0/(BPM * 4.0) * 1000000.0);        // initialize timer1, and set a 1/2 second period
+  Timer1.attachInterrupt(seqCallback);  // attaches callback() as a timer overflow interrupt
+  char tempBPM[3];
+
   dp("In playing mode\n");  
   while (true) {                        // Loop until mode change breaks out
+    dp("Just in!\n");
     
     int numChars;                       // Number of Characters recieved from Serial comm
 
@@ -306,29 +333,56 @@ char Play() {
       if (receivedChars[2] == '1') {
         debug = 1;
         dp("Debugging mode on");
+        continue;
       }
       else if (receivedChars[2] == '0') {
         debug = 0;
+        continue;
       }
     }
+    else if (receivedChars[0] == 's') {
+      return '2';
+    }
+    else if (receivedChars[0] == 'b') {
+      tempBPM[0] = '\0';
+      if (receivedChars[4] == '\0') {  // They sent a two character BPM
+        tempBPM[0] = receivedChars[2];
+        tempBPM[1] = receivedChars[3];
+        dp("2 char\n");
+      }
+      else {                          // They sent a three character BPM
+        tempBPM[0] = receivedChars[2];
+        tempBPM[1] = receivedChars[3];
+        tempBPM[2] = receivedChars[4];
+        dp("3 char\n");
+      }
       
-    parseCSV(0);                 // Parse recieved Serial into CSV    
+      BPM = atol(tempBPM);
+
+      dp("BPM set to: ");
+      dpi(BPM);
+      dp("\n");
+
+      Timer1.initialize(60.0/(BPM * 4.0) * 1000000.0);
+      Timer1.attachInterrupt(seqCallback);
+      continue;
+    }
+      
+    parseCSV(1);                 // Parse recieved Serial into CSV    
     
 
-    // Calculate all rheostat values  
-    for (int j = 0; j < numOsc; j++) {
-      rtows(csvValues[j]);
-      OutValues[j*2] = memi[0];
-      OutValues[j*2 + 1] = memi[1];
-    }
     
-    writeAllRheostats();
+    
+    //writeAllRheostats();
 
   }
 }
 
 // Tune function. Call when you want to be in tuning mode. Will exit with mode request.
 char Tune() {
+
+  Timer1.detachInterrupt();
+
   float frequency;                      // Used for saving/reporting frequency
   double sum = 0;                       // Sum of clock counts thus far
   int count = 0;                        // Used to count freqs measured, exits at numFreqSamples
@@ -348,9 +402,11 @@ char Tune() {
       if (receivedChars[2] == '1') {
         debug = 1;
         dp("Debugging mode on");
+        continue;
       }
       else if (receivedChars[2] == '0') {
         debug = 0;
+        continue;
       }
     }
     
@@ -404,32 +460,54 @@ void Sequencer() {
   int sum;
   int k;
   int count;
-  dp("Entered dequencer mode\n");
+  long microsbetween;
+  dp("Entered sequencer mode\n");
 
   while (true) {
+
+    while ( Serial.available() == 0 ) ; // Wait for serial
+
     readSerial();
     if (receivedChars[0] == 's') {
       // Settings Mode
-      if (receivedChars[2] == '0') {                          
+      if (receivedChars[2] == '0') {
+        dp("Now in settings mode, expecting BPM,bottom\n");
+        while ( Serial.available() == 0 ) ; // Wait for serial                          
         readSerial();
         parseCSV(0);
         if (csvValues[0] > 200 or csvValues[0] < 20) {
           Serial.print("e:2\n");
+          dp("BPM out of range\n");
         }
         else {
-          if (csvValues[1] > 1 or csvValues[1] > 12) {
+          if (csvValues[1] < 1 or csvValues[1] > 12) {
             Serial.print("e:2\n");
+            dp("Bottom out of range\n");
           }
           else {
             BPM = csvValues[0];
             tst = csvValues[1];
             Serial.print("e:0\n");
+            dpi(csvValues[0]);
+            dp("-");
+            dpi(csvValues[1]);
+            dp("-");
+            
+            microsbetween = floor((60.0/(csvValues[0] * csvValues[1])) * 1000000.0);
+            dp("Microseconds between notes:");
+            dpi(microsbetween);
+            dp("\n");
+            delay(1000);
+            Timer1.initialize(microsbetween);
+            
+            
           }
         }
         BPM = csvValues[0];
       }
       // Enter data for sequencer 1
       else if (receivedChars[2] == '1') {
+        while ( Serial.available() == 0 ) ; // Wait for serial
         readSerial();
         parseCSV(1);
 
@@ -443,8 +521,6 @@ void Sequencer() {
               check = 0;
               break;
             }
-
-            //[151325,4,123132,2,12412,2,-1,-1,-1]
           }
           else {
             if ((j % 2) == 0) {   // Dealing with first element of pair
@@ -469,7 +545,9 @@ void Sequencer() {
           Serial.print("\n");
           check = 0;
         }
-
+        dp("Sum:");
+        dpi(sum);
+        dp("\n");
         // Checks have passed, go ahead! 
         if (check == 1) {
           k = 0;
@@ -483,6 +561,10 @@ void Sequencer() {
             }
             k = k + 2;
           }
+          for (int m = 0; m < sum; m++) {
+            dpi(seq1vals[sum]);
+          }
+          dp("\n");
           Serial.print("e:0,");
           Serial.print(sum);
           Serial.print("\n");
@@ -508,12 +590,82 @@ void Sequencer() {
 
 }
 
+
 void startSequencers() {
-  
+
+  justCameFromSeq = 1;
+
+  if (receivedChars[2] == 's') {  // Stop sequencing
+    seq1CurrentNote = 0;
+    seq1on = 0;
+    return;
+  }
+
+  long notePeriod;                   // Distance between each note in microseconds
+  if (receivedChars[2] == '0') {       // 4 beats
+    numNotesForCurrentSeq = 4 * 4;
+  }
+  else if (receivedChars[2] == '1') {  // 8 beats
+    numNotesForCurrentSeq = 8 * 4;
+  }
+  else if (receivedChars[2] == '2') {   // 16 beats
+    numNotesForCurrentSeq = 32 * 4;
+  }
+  else {
+    Serial.print("e:0");  // request not understood
+    return;
+  }
+
+  for (int i = 0; i < maxNumSeqNotes; i++) {  // Clear out any previous sequencer values
+    seq1vals[i] = -1;
+  }
+
+  seq1CurrentNote = 0;    // Set at beginning
+  seq1on = 2;             // Set to record mode
+
+  notePeriod = ((60.0/(BPM * 4.0) * 1000000.0));
+
+  Timer1.initialize(notePeriod);        // initialize timer1, and set a 1/2 second period
+  Timer1.attachInterrupt(seqCallback);  // attaches callback() as a timer overflow interrupt
+
 }
 
 void seqCallback() {
+  
+  if (seq1on == 1) {    // If we're sequencing, grab those notes and update the OutValues
+    dp("scb seq, CurNote=");
+    dpi(seq1CurrentNote);
+    dp("\n");
+    for (int i = 0; i < 3; i++) {
+      csvValues[3 + i] = seq1vals[seq1CurrentNote + i];
+    }
+    seq1CurrentNote = seq1CurrentNote + 3;
+    if (seq1CurrentNote >= numNotesForCurrentSeq) {
+      seq1CurrentNote = 0;
+    }
+  }
+  else if (seq1on == 2) {  // Recording for sequencer
+    dp("scb rec, CurNote=");
+    dpi(seq1CurrentNote);
+    dp("\n");
+    for (int j = 0; j < 3; j++) {
+      seq1vals[seq1CurrentNote + j] = csvValues[j];
+    }
 
+    seq1CurrentNote = seq1CurrentNote + 3;
+    // Push the recieved notes onto the later oscillators
+    for (int k = 0; k < 3; k++) {
+      csvValues[k + 3] = OutValues[k];
+      csvValues[k] = 0;
+    }
+    if (seq1CurrentNote >= numNotesForCurrentSeq) { // We've finished recording all the notes we want!
+      seq1on = 1;
+      seq1CurrentNote = 0;
+      Serial.print("s:d\n");
+    }
+  }
+
+  writeAllRheostats();
   
 }
 
@@ -528,8 +680,6 @@ void setup() {
 
   pinMode(40, OUTPUT);
 
-
-
   SPI.begin();                          // begin SPI protocol
   SPI.setBitOrder(MSBFIRST);            // set SPI bit order
   Serial.begin(baudRate);               // begin Serial communication to PC
@@ -537,6 +687,7 @@ void setup() {
   for (int l = 0; l < numOsc; l++) {
         digitalWrite(OscTransistorPins[l], LOW);
   }
+
 }
 
 // Main loop
@@ -546,12 +697,14 @@ void loop() {
     m = Tune();
   } 
   else if (mode == 1) {
-    Serial.print("m:1\n");
+    if (justCameFromSeq != 1) {
+      Serial.print("m:1\n");
+    }    
     m = Play();
   }
-  else if (mode = 2) {
-    Serial.print("m:2\n");
-    Sequencer();
+  else if (mode == 2) {
+    //Serial.print("m:2\n");
+    startSequencers();
     m = '1';
   }
   
@@ -562,8 +715,8 @@ void loop() {
   else if (m == '1') {
     mode = 1;
   }
-  else if (m == '2' ) {
-    mode == 2;
+  else if (m == '2') {
+    mode = 2;
   }
   else {
     Serial.print("e:2\n");
