@@ -1,0 +1,540 @@
+[2016/04/20 13:58:07:028] (ArduinoManager) System-The operation has timed out.
+	Stack Trace:
+   at System.IO.Ports.SerialStream.Read(Byte[] array, Int32 offset, Int32 count, Int32 timeout)
+   at System.IO.Ports.SerialStream.Read(Byte[] array, Int32 offset, Int32 count)
+   at System.IO.Ports.SerialPort.InternalRead(Char[] buffer, Int32 offset, Int32 count, Int32 timeout, Boolean countMultiByteCharsAsOne)
+   at System.IO.Ports.SerialPort.ReadTo(String value)
+   at System.IO.Ports.SerialPort.ReadLine()
+   at KinectTheramin.ArduinoManager.Send(Boolean requestReply, String message) in C:\Users\Ben\Source\Workspaces\KinectTheramin\KinectTheramin\KinectTheramin\ArduinoManager.cs:line 124
+[2016/04/20 13:59:27:555] (ArduinoManager) System-The operation has timed out.
+	Stack Trace:
+   at System.IO.Ports.SerialStream.Read(Byte[] array, Int32 offset, Int32 count, Int32 timeout)
+   at System.IO.Ports.SerialStream.Read(Byte[] array, Int32 offset, Int32 count)
+   at System.IO.Ports.SerialPort.InternalRead(Char[] buffer, Int32 offset, Int32 count, Int32 timeout, Boolean countMultiByteCharsAsOne)
+   at System.IO.Ports.SerialPort.ReadTo(String value)
+   at System.IO.Ports.SerialPort.ReadLine()
+   at KinectTheramin.ArduinoManager.Send(Boolean requestReply, String message) in C:\Users\Ben\Source\Workspaces\KinectTheramin\KinectTheramin\KinectTheramin\ArduinoManager.cs:line 124
+[2016/04/20 14:09:47:286] (ArduinoManager) System-Arithmetic operation resulted in an overflow.
+	Stack Trace:
+   at System.IO.Ports.SerialPort.ReadTo(String value)
+   at System.IO.Ports.SerialPort.ReadLine()
+   at KinectTheramin.ArduinoManager.ArduinoPort_DataReceived(Object sender, SerialDataReceivedEventArgs e) in C:\Users\Ben\Source\Workspaces\KinectTheramin\KinectTheramin\KinectTheramin\ArduinoManager.cs:line 100
+[2016/04/20 14:09:47:358] (ArduinoManager) System-Arithmetic operation resulted in an overflow.
+	Stack Trace:
+   at System.IO.Ports.SerialPort.ReadTo(String value)
+   at System.IO.Ports.SerialPort.ReadLine()
+   at KinectTheramin.ArduinoManager.Send(Boolean requestReply, String message) in C:\Users\Ben\Source\Workspaces\KinectTheramin\KinectTheramin\KinectTheramin\ArduinoManager.cs:line 124
+[2016/04/20 14:18:55:950] (ArduinoManager) System-The operation has timed out.
+	Stack Trace:
+   at System.IO.Ports.SerialStream.Read(Byte[] array, Int32 offset, Int32 count, Int32 timeout)
+   at System.IO.Ports.SerialStream.Read(Byte[] array, Int32 offset, Int32 count)
+   at System.IO.Ports.SerialPort.InternalRead(Char[] buffer, Int32 offset, Int32 count, Int32 timeout, Boolean countMultiByteCharsAsOne)
+   at System.IO.Ports.SerialPort.ReadTo(String value)
+   at System.IO.Ports.SerialPort.ReadLine()
+   at KinectTheramin.ArduinoManager.ArduinoPort_DataReceived(Object sender, SerialDataReceivedEventArgs e) in C:\Users\Ben\Source\Workspaces\KinectTheramin\KinectTheramin\KinectTheramin\ArduinoManager.cs:line 100
+[2016/04/20 14:25:55:227] (ArduinoManager) System-The operation has timed out.
+	Stack Trace:
+   at System.IO.Ports.SerialStream.Read(Byte[] array, Int32 offset, Int32 count, Int32 timeout)
+   at System.IO.Ports.SerialStream.Read(Byte[] array, Int32 offset, Int32 count)
+   at System.IO.Ports.SerialPort.InternalRead(Char[] buffer, Int32 offset, Int32 count, Int32 timeout, Boolean countMultiByteCharsAsOne)
+   at System.IO.Ports.SerialPort.ReadTo(String value)
+   at System.IO.Ports.SerialPort.ReadLine()
+   at KinectTheramin.ArduinoManager.Send(Boolean requestReply, String message) in C:\Users\Ben\Source\Workspaces\KinectTheramin\KinectTheramin\KinectTheramin\ArduinoManager.cs:line 124
+[2016/04/20 14:25:56:793] (ArduinoManager) System-The operation has timed out.
+	Stack Trace:
+   at System.IO.Ports.SerialStream.Read(Byte[] array, Int32 offset, Int32 count, Int32 timeout)
+   at System.IO.Ports.SerialStream.Read(Byte[] array, Int32 offset, Int32 count)
+   at System.IO.Ports.SerialPort.InternalRead(Char[] buffer, Int32 offset, Int32 count, Int32 timeout, Boolean countMultiByteCharsAsOne)
+   at System.IO.Ports.SerialPort.ReadTo(String value)
+   at System.IO.Ports.SerialPort.ReadLine()
+   at KinectTheramin.ArduinoManager.Send(Boolean requestReply, String message) in C:\Users\Ben\Source\Workspaces\KinectTheramin\KinectTheramin\KinectTheramin\ArduinoManager.cs:line 124
+[2016/04/20 14:32:47:051] (ArduinoManager) System-The operation has timed out.
+	Stack Trace:
+   at System.IO.Ports.SerialStream.Read(Byte[] array, Int32 offset, Int32 count, Int32 timeout)
+   at System.IO.Ports.SerialStream.Read(Byte[] array, Int32 offset, Int32 count)
+   at System.IO.Ports.SerialPort.InternalRead(Char[] buffer, Int32 offset, Int32 count, Int32 timeout, Boolean countMultiByteCharsAsOne)
+   at System.IO.Ports.SerialPort.ReadTo(String value)
+   at System.IO.Ports.SerialPort.ReadLine()
+   at KinectTheramin.ArduinoManager.Send(Boolean requestReply, String message) in C:\Users\Ben\Source\Workspaces\KinectTheramin\KinectTheramin\KinectTheramin\ArduinoManager.cs:line 127
+[2016/04/20 14:41:03:075] (ArduinoManager) System-The operation has timed out.
+	Stack Trace:
+   at System.IO.Ports.SerialStream.Read(Byte[] array, Int32 offset, Int32 count, Int32 timeout)
+   at System.IO.Ports.SerialStream.Read(Byte[] array, Int32 offset, Int32 count)
+   at System.IO.Ports.SerialPort.InternalRead(Char[] buffer, Int32 offset, Int32 count, Int32 timeout, Boolean countMultiByteCharsAsOne)
+   at System.IO.Ports.SerialPort.ReadTo(String value)
+   at System.IO.Ports.SerialPort.ReadLine()
+   at KinectTheramin.ArduinoManager.Send(Boolean requestReply, String message) in C:\Users\Ben\Source\Workspaces\KinectTheramin\KinectTheramin\KinectTheramin\ArduinoManager.cs:line 127
+[2016/04/20 14:41:12:506] (ArduinoManager) System-The operation has timed out.
+	Stack Trace:
+   at System.IO.Ports.SerialStream.Read(Byte[] array, Int32 offset, Int32 count, Int32 timeout)
+   at System.IO.Ports.SerialStream.Read(Byte[] array, Int32 offset, Int32 count)
+   at System.IO.Ports.SerialPort.InternalRead(Char[] buffer, Int32 offset, Int32 count, Int32 timeout, Boolean countMultiByteCharsAsOne)
+   at System.IO.Ports.SerialPort.ReadTo(String value)
+   at System.IO.Ports.SerialPort.ReadLine()
+   at KinectTheramin.ArduinoManager.ArduinoPort_DataReceived(Object sender, SerialDataReceivedEventArgs e) in C:\Users\Ben\Source\Workspaces\KinectTheramin\KinectTheramin\KinectTheramin\ArduinoManager.cs:line 102
+[2016/04/20 14:42:35:721] (ArduinoManager) System-The operation has timed out.
+	Stack Trace:
+   at System.IO.Ports.SerialStream.Read(Byte[] array, Int32 offset, Int32 count, Int32 timeout)
+   at System.IO.Ports.SerialStream.Read(Byte[] array, Int32 offset, Int32 count)
+   at System.IO.Ports.SerialPort.InternalRead(Char[] buffer, Int32 offset, Int32 count, Int32 timeout, Boolean countMultiByteCharsAsOne)
+   at System.IO.Ports.SerialPort.ReadTo(String value)
+   at System.IO.Ports.SerialPort.ReadLine()
+   at KinectTheramin.ArduinoManager.Send(Boolean requestReply, String message) in C:\Users\Ben\Source\Workspaces\KinectTheramin\KinectTheramin\KinectTheramin\ArduinoManager.cs:line 127
+[2016/04/20 14:44:57:962] (ArduinoManager) System-The operation has timed out.
+	Stack Trace:
+   at System.IO.Ports.SerialStream.Read(Byte[] array, Int32 offset, Int32 count, Int32 timeout)
+   at System.IO.Ports.SerialStream.Read(Byte[] array, Int32 offset, Int32 count)
+   at System.IO.Ports.SerialPort.InternalRead(Char[] buffer, Int32 offset, Int32 count, Int32 timeout, Boolean countMultiByteCharsAsOne)
+   at System.IO.Ports.SerialPort.ReadTo(String value)
+   at System.IO.Ports.SerialPort.ReadLine()
+   at KinectTheramin.ArduinoManager.Send(Boolean requestReply, String message) in C:\Users\Ben\Source\Workspaces\KinectTheramin\KinectTheramin\KinectTheramin\ArduinoManager.cs:line 127
+[2016/04/20 14:49:46:058] (ArduinoManager) System-The operation has timed out.
+	Stack Trace:
+   at System.IO.Ports.SerialStream.Read(Byte[] array, Int32 offset, Int32 count, Int32 timeout)
+   at System.IO.Ports.SerialStream.Read(Byte[] array, Int32 offset, Int32 count)
+   at System.IO.Ports.SerialPort.InternalRead(Char[] buffer, Int32 offset, Int32 count, Int32 timeout, Boolean countMultiByteCharsAsOne)
+   at System.IO.Ports.SerialPort.ReadTo(String value)
+   at System.IO.Ports.SerialPort.ReadLine()
+   at KinectTheramin.ArduinoManager.Send(Boolean requestReply, String message) in C:\Users\Ben\Source\Workspaces\KinectTheramin\KinectTheramin\KinectTheramin\ArduinoManager.cs:line 127
+[2016/04/20 14:55:19:342] (ArduinoManager) System-Arithmetic operation resulted in an overflow.
+	Stack Trace:
+   at System.IO.Ports.SerialPort.ReadTo(String value)
+   at System.IO.Ports.SerialPort.ReadLine()
+   at KinectTheramin.ArduinoManager.Send(Boolean requestReply, String message) in C:\Users\Ben\Source\Workspaces\KinectTheramin\KinectTheramin\KinectTheramin\ArduinoManager.cs:line 127
+[2016/04/20 14:55:19:344] (ArduinoManager) System-Arithmetic operation resulted in an overflow.
+	Stack Trace:
+   at System.IO.Ports.SerialPort.ReadTo(String value)
+   at System.IO.Ports.SerialPort.ReadLine()
+   at KinectTheramin.ArduinoManager.ArduinoPort_DataReceived(Object sender, SerialDataReceivedEventArgs e) in C:\Users\Ben\Source\Workspaces\KinectTheramin\KinectTheramin\KinectTheramin\ArduinoManager.cs:line 102
+[2016/04/20 14:55:25:875] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:25:881] (Tuner) Tuner returned 0 resistance for note 261.63
+[2016/04/20 14:55:25:887] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:25:891] (Tuner) Tuner returned 0 resistance for note 261.63
+[2016/04/20 14:55:25:895] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:25:900] (Tuner) Tuner returned 0 resistance for note 261.63
+[2016/04/20 14:55:25:904] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:25:907] (Tuner) Tuner returned 0 resistance for note 261.63
+[2016/04/20 14:55:25:913] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:25:918] (Tuner) Tuner returned 0 resistance for note 261.63
+[2016/04/20 14:55:25:921] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:25:924] (Tuner) Tuner returned 0 resistance for note 261.63
+[2016/04/20 14:55:25:930] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:25:934] (Tuner) Tuner returned 0 resistance for note 277.18
+[2016/04/20 14:55:25:937] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:26:086] (Tuner) Tuner returned 0 resistance for note 277.18
+[2016/04/20 14:55:26:089] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:26:093] (Tuner) Tuner returned 0 resistance for note 277.18
+[2016/04/20 14:55:26:097] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:26:101] (Tuner) Tuner returned 0 resistance for note 277.18
+[2016/04/20 14:55:26:104] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:26:108] (Tuner) Tuner returned 0 resistance for note 277.18
+[2016/04/20 14:55:26:113] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:26:117] (Tuner) Tuner returned 0 resistance for note 277.18
+[2016/04/20 14:55:26:121] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:26:125] (Tuner) Tuner returned 0 resistance for note 293.66
+[2016/04/20 14:55:26:128] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:26:287] (Tuner) Tuner returned 0 resistance for note 293.66
+[2016/04/20 14:55:26:291] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:26:295] (Tuner) Tuner returned 0 resistance for note 293.66
+[2016/04/20 14:55:26:299] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:26:303] (Tuner) Tuner returned 0 resistance for note 293.66
+[2016/04/20 14:55:26:311] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:26:315] (Tuner) Tuner returned 0 resistance for note 293.66
+[2016/04/20 14:55:26:319] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:26:322] (Tuner) Tuner returned 0 resistance for note 293.66
+[2016/04/20 14:55:26:346] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:26:354] (Tuner) Tuner returned 0 resistance for note 311.13
+[2016/04/20 14:55:26:358] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:26:362] (Tuner) Tuner returned 0 resistance for note 311.13
+[2016/04/20 14:55:26:487] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:26:491] (Tuner) Tuner returned 0 resistance for note 311.13
+[2016/04/20 14:55:26:495] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:26:499] (Tuner) Tuner returned 0 resistance for note 311.13
+[2016/04/20 14:55:26:502] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:26:506] (Tuner) Tuner returned 0 resistance for note 311.13
+[2016/04/20 14:55:26:509] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:26:514] (Tuner) Tuner returned 0 resistance for note 311.13
+[2016/04/20 14:55:26:518] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:26:522] (Tuner) Tuner returned 0 resistance for note 329.63
+[2016/04/20 14:55:26:526] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:26:530] (Tuner) Tuner returned 0 resistance for note 329.63
+[2016/04/20 14:55:26:687] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:26:691] (Tuner) Tuner returned 0 resistance for note 329.63
+[2016/04/20 14:55:26:695] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:26:699] (Tuner) Tuner returned 0 resistance for note 329.63
+[2016/04/20 14:55:26:702] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:26:706] (Tuner) Tuner returned 0 resistance for note 329.63
+[2016/04/20 14:55:26:710] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:26:715] (Tuner) Tuner returned 0 resistance for note 329.63
+[2016/04/20 14:55:26:719] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:26:723] (Tuner) Tuner returned 0 resistance for note 349.23
+[2016/04/20 14:55:26:726] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:26:731] (Tuner) Tuner returned 0 resistance for note 349.23
+[2016/04/20 14:55:26:735] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:26:892] (Tuner) Tuner returned 0 resistance for note 349.23
+[2016/04/20 14:55:26:900] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:26:907] (Tuner) Tuner returned 0 resistance for note 349.23
+[2016/04/20 14:55:26:915] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:26:920] (Tuner) Tuner returned 0 resistance for note 349.23
+[2016/04/20 14:55:26:924] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:26:928] (Tuner) Tuner returned 0 resistance for note 349.23
+[2016/04/20 14:55:26:933] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:26:938] (Tuner) Tuner returned 0 resistance for note 369.99
+[2016/04/20 14:55:26:942] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:26:949] (Tuner) Tuner returned 0 resistance for note 369.99
+[2016/04/20 14:55:26:955] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:27:089] (Tuner) Tuner returned 0 resistance for note 369.99
+[2016/04/20 14:55:27:093] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:27:098] (Tuner) Tuner returned 0 resistance for note 369.99
+[2016/04/20 14:55:27:104] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:27:108] (Tuner) Tuner returned 0 resistance for note 369.99
+[2016/04/20 14:55:27:115] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:27:120] (Tuner) Tuner returned 0 resistance for note 369.99
+[2016/04/20 14:55:27:125] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:27:131] (Tuner) Tuner returned 0 resistance for note 392
+[2016/04/20 14:55:27:136] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:27:142] (Tuner) Tuner returned 0 resistance for note 392
+[2016/04/20 14:55:27:150] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:27:157] (Tuner) Tuner returned 0 resistance for note 392
+[2016/04/20 14:55:27:290] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:27:299] (Tuner) Tuner returned 0 resistance for note 392
+[2016/04/20 14:55:27:303] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:27:307] (Tuner) Tuner returned 0 resistance for note 392
+[2016/04/20 14:55:27:313] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:27:319] (Tuner) Tuner returned 0 resistance for note 392
+[2016/04/20 14:55:27:346] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:27:354] (Tuner) Tuner returned 0 resistance for note 415.3
+[2016/04/20 14:55:27:358] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:27:362] (Tuner) Tuner returned 0 resistance for note 415.3
+[2016/04/20 14:55:27:366] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:27:371] (Tuner) Tuner returned 0 resistance for note 415.3
+[2016/04/20 14:55:27:490] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:27:493] (Tuner) Tuner returned 0 resistance for note 415.3
+[2016/04/20 14:55:27:497] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:27:501] (Tuner) Tuner returned 0 resistance for note 415.3
+[2016/04/20 14:55:27:505] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:27:509] (Tuner) Tuner returned 0 resistance for note 415.3
+[2016/04/20 14:55:27:512] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:27:518] (Tuner) Tuner returned 0 resistance for note 440
+[2016/04/20 14:55:27:522] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:27:526] (Tuner) Tuner returned 0 resistance for note 440
+[2016/04/20 14:55:27:530] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:27:533] (Tuner) Tuner returned 0 resistance for note 440
+[2016/04/20 14:55:27:537] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:27:691] (Tuner) Tuner returned 0 resistance for note 440
+[2016/04/20 14:55:27:698] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:27:703] (Tuner) Tuner returned 0 resistance for note 440
+[2016/04/20 14:55:27:707] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:27:711] (Tuner) Tuner returned 0 resistance for note 440
+[2016/04/20 14:55:27:718] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:27:725] (Tuner) Tuner returned 0 resistance for note 466.16
+[2016/04/20 14:55:27:731] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:27:735] (Tuner) Tuner returned 0 resistance for note 466.16
+[2016/04/20 14:55:27:739] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:27:746] (Tuner) Tuner returned 0 resistance for note 466.16
+[2016/04/20 14:55:27:755] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:27:761] (Tuner) Tuner returned 0 resistance for note 466.16
+[2016/04/20 14:55:27:892] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:27:925] (Tuner) Tuner returned 0 resistance for note 466.16
+[2016/04/20 14:55:27:932] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:27:941] (Tuner) Tuner returned 0 resistance for note 466.16
+[2016/04/20 14:55:27:948] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:27:955] (Tuner) Tuner returned 0 resistance for note 493.88
+[2016/04/20 14:55:27:959] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:27:963] (Tuner) Tuner returned 0 resistance for note 493.88
+[2016/04/20 14:55:27:968] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:27:973] (Tuner) Tuner returned 0 resistance for note 493.88
+[2016/04/20 14:55:27:979] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:27:986] (Tuner) Tuner returned 0 resistance for note 493.88
+[2016/04/20 14:55:28:092] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:28:098] (Tuner) Tuner returned 0 resistance for note 493.88
+[2016/04/20 14:55:28:102] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:28:106] (Tuner) Tuner returned 0 resistance for note 493.88
+[2016/04/20 14:55:28:110] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:28:115] (Tuner) Tuner returned 0 resistance for note 523.25
+[2016/04/20 14:55:28:120] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:28:124] (Tuner) Tuner returned 0 resistance for note 523.25
+[2016/04/20 14:55:28:127] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:28:132] (Tuner) Tuner returned 0 resistance for note 523.25
+[2016/04/20 14:55:28:136] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:28:139] (Tuner) Tuner returned 0 resistance for note 523.25
+[2016/04/20 14:55:28:143] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:28:293] (Tuner) Tuner returned 0 resistance for note 523.25
+[2016/04/20 14:55:28:297] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:28:302] (Tuner) Tuner returned 0 resistance for note 523.25
+[2016/04/20 14:55:28:306] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:28:310] (Tuner) Tuner returned 0 resistance for note 554.37
+[2016/04/20 14:55:28:318] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:28:323] (Tuner) Tuner returned 0 resistance for note 554.37
+[2016/04/20 14:55:28:327] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:28:331] (Tuner) Tuner returned 0 resistance for note 554.37
+[2016/04/20 14:55:28:336] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:28:340] (Tuner) Tuner returned 0 resistance for note 554.37
+[2016/04/20 14:55:28:344] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:28:494] (Tuner) Tuner returned 0 resistance for note 554.37
+[2016/04/20 14:55:28:500] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:28:504] (Tuner) Tuner returned 0 resistance for note 554.37
+[2016/04/20 14:55:28:508] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:28:513] (Tuner) Tuner returned 0 resistance for note 587.33
+[2016/04/20 14:55:28:519] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:28:523] (Tuner) Tuner returned 0 resistance for note 587.33
+[2016/04/20 14:55:28:527] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:28:531] (Tuner) Tuner returned 0 resistance for note 587.33
+[2016/04/20 14:55:28:535] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:28:539] (Tuner) Tuner returned 0 resistance for note 587.33
+[2016/04/20 14:55:28:543] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:28:549] (Tuner) Tuner returned 0 resistance for note 587.33
+[2016/04/20 14:55:28:694] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:28:699] (Tuner) Tuner returned 0 resistance for note 587.33
+[2016/04/20 14:55:28:703] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:28:707] (Tuner) Tuner returned 0 resistance for note 622.25
+[2016/04/20 14:55:28:712] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:28:719] (Tuner) Tuner returned 0 resistance for note 622.25
+[2016/04/20 14:55:28:723] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:28:727] (Tuner) Tuner returned 0 resistance for note 622.25
+[2016/04/20 14:55:28:732] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:28:736] (Tuner) Tuner returned 0 resistance for note 622.25
+[2016/04/20 14:55:28:741] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:28:745] (Tuner) Tuner returned 0 resistance for note 622.25
+[2016/04/20 14:55:28:894] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:28:907] (Tuner) Tuner returned 0 resistance for note 622.25
+[2016/04/20 14:55:28:918] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:28:924] (Tuner) Tuner returned 0 resistance for note 659.25
+[2016/04/20 14:55:28:930] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:28:938] (Tuner) Tuner returned 0 resistance for note 659.25
+[2016/04/20 14:55:28:943] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:28:954] (Tuner) Tuner returned 0 resistance for note 659.25
+[2016/04/20 14:55:28:959] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:28:963] (Tuner) Tuner returned 0 resistance for note 659.25
+[2016/04/20 14:55:28:967] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:28:972] (Tuner) Tuner returned 0 resistance for note 659.25
+[2016/04/20 14:55:29:104] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:29:117] (Tuner) Tuner returned 0 resistance for note 659.25
+[2016/04/20 14:55:29:129] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:29:137] (Tuner) Tuner returned 0 resistance for note 698.46
+[2016/04/20 14:55:29:142] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:29:149] (Tuner) Tuner returned 0 resistance for note 698.46
+[2016/04/20 14:55:29:154] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:29:159] (Tuner) Tuner returned 0 resistance for note 698.46
+[2016/04/20 14:55:29:163] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:29:167] (Tuner) Tuner returned 0 resistance for note 698.46
+[2016/04/20 14:55:29:171] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:29:175] (Tuner) Tuner returned 0 resistance for note 698.46
+[2016/04/20 14:55:29:179] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:29:294] (Tuner) Tuner returned 0 resistance for note 698.46
+[2016/04/20 14:55:29:299] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:29:304] (Tuner) Tuner returned 0 resistance for note 739.99
+[2016/04/20 14:55:29:308] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:29:312] (Tuner) Tuner returned 0 resistance for note 739.99
+[2016/04/20 14:55:29:320] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:29:327] (Tuner) Tuner returned 0 resistance for note 739.99
+[2016/04/20 14:55:29:333] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:29:339] (Tuner) Tuner returned 0 resistance for note 739.99
+[2016/04/20 14:55:29:345] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:29:353] (Tuner) Tuner returned 0 resistance for note 739.99
+[2016/04/20 14:55:29:357] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:29:495] (Tuner) Tuner returned 0 resistance for note 739.99
+[2016/04/20 14:55:29:500] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:29:504] (Tuner) Tuner returned 0 resistance for note 783.99
+[2016/04/20 14:55:29:508] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:29:513] (Tuner) Tuner returned 0 resistance for note 783.99
+[2016/04/20 14:55:29:518] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:29:523] (Tuner) Tuner returned 0 resistance for note 783.99
+[2016/04/20 14:55:29:527] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:29:534] (Tuner) Tuner returned 0 resistance for note 783.99
+[2016/04/20 14:55:29:538] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:29:545] (Tuner) Tuner returned 0 resistance for note 783.99
+[2016/04/20 14:55:29:553] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:29:558] (Tuner) Tuner returned 0 resistance for note 783.99
+[2016/04/20 14:55:29:695] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:29:700] (Tuner) Tuner returned 0 resistance for note 830.61
+[2016/04/20 14:55:29:704] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:29:708] (Tuner) Tuner returned 0 resistance for note 830.61
+[2016/04/20 14:55:29:714] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:29:719] (Tuner) Tuner returned 0 resistance for note 830.61
+[2016/04/20 14:55:29:723] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:29:728] (Tuner) Tuner returned 0 resistance for note 830.61
+[2016/04/20 14:55:29:732] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:29:737] (Tuner) Tuner returned 0 resistance for note 830.61
+[2016/04/20 14:55:29:741] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:29:747] (Tuner) Tuner returned 0 resistance for note 830.61
+[2016/04/20 14:55:29:896] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:29:905] (Tuner) Tuner returned 0 resistance for note 880
+[2016/04/20 14:55:29:911] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:29:918] (Tuner) Tuner returned 0 resistance for note 880
+[2016/04/20 14:55:29:925] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:29:930] (Tuner) Tuner returned 0 resistance for note 880
+[2016/04/20 14:55:29:936] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:29:943] (Tuner) Tuner returned 0 resistance for note 880
+[2016/04/20 14:55:29:951] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:29:957] (Tuner) Tuner returned 0 resistance for note 880
+[2016/04/20 14:55:29:961] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:29:970] (Tuner) Tuner returned 0 resistance for note 880
+[2016/04/20 14:55:29:974] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:30:099] (Tuner) Tuner returned 0 resistance for note 932.33
+[2016/04/20 14:55:30:106] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:30:112] (Tuner) Tuner returned 0 resistance for note 932.33
+[2016/04/20 14:55:30:120] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:30:126] (Tuner) Tuner returned 0 resistance for note 932.33
+[2016/04/20 14:55:30:133] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:30:140] (Tuner) Tuner returned 0 resistance for note 932.33
+[2016/04/20 14:55:30:146] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:30:155] (Tuner) Tuner returned 0 resistance for note 932.33
+[2016/04/20 14:55:30:160] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:30:167] (Tuner) Tuner returned 0 resistance for note 932.33
+[2016/04/20 14:55:30:176] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:30:299] (Tuner) Tuner returned 0 resistance for note 987.77
+[2016/04/20 14:55:30:308] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:30:318] (Tuner) Tuner returned 0 resistance for note 987.77
+[2016/04/20 14:55:30:327] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:30:334] (Tuner) Tuner returned 0 resistance for note 987.77
+[2016/04/20 14:55:30:342] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:30:347] (Tuner) Tuner returned 0 resistance for note 987.77
+[2016/04/20 14:55:30:359] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:30:364] (Tuner) Tuner returned 0 resistance for note 987.77
+[2016/04/20 14:55:30:372] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:30:378] (Tuner) Tuner returned 0 resistance for note 987.77
+[2016/04/20 14:55:30:398] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:30:409] (Tuner) Tuner returned 0 resistance for note 1046.5
+[2016/04/20 14:55:30:498] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:30:502] (Tuner) Tuner returned 0 resistance for note 1046.5
+[2016/04/20 14:55:30:507] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:30:511] (Tuner) Tuner returned 0 resistance for note 1046.5
+[2016/04/20 14:55:30:517] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:30:522] (Tuner) Tuner returned 0 resistance for note 1046.5
+[2016/04/20 14:55:30:526] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:30:531] (Tuner) Tuner returned 0 resistance for note 1046.5
+[2016/04/20 14:55:30:535] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:30:540] (Tuner) Tuner returned 0 resistance for note 1046.5
+[2016/04/20 14:55:30:544] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:30:551] (Tuner) Tuner returned 0 resistance for note 1108.73
+[2016/04/20 14:55:30:699] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:30:704] (Tuner) Tuner returned 0 resistance for note 1108.73
+[2016/04/20 14:55:30:708] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:30:713] (Tuner) Tuner returned 0 resistance for note 1108.73
+[2016/04/20 14:55:30:720] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:30:724] (Tuner) Tuner returned 0 resistance for note 1108.73
+[2016/04/20 14:55:30:729] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:30:734] (Tuner) Tuner returned 0 resistance for note 1108.73
+[2016/04/20 14:55:30:739] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:30:743] (Tuner) Tuner returned 0 resistance for note 1108.73
+[2016/04/20 14:55:30:748] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:30:754] (Tuner) Tuner returned 0 resistance for note 1174.66
+[2016/04/20 14:55:30:759] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:30:899] (Tuner) Tuner returned 0 resistance for note 1174.66
+[2016/04/20 14:55:30:906] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:30:913] (Tuner) Tuner returned 0 resistance for note 1174.66
+[2016/04/20 14:55:30:920] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:30:927] (Tuner) Tuner returned 0 resistance for note 1174.66
+[2016/04/20 14:55:30:934] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:30:942] (Tuner) Tuner returned 0 resistance for note 1174.66
+[2016/04/20 14:55:30:947] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:30:954] (Tuner) Tuner returned 0 resistance for note 1174.66
+[2016/04/20 14:55:30:962] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:30:970] (Tuner) Tuner returned 0 resistance for note 1244.51
+[2016/04/20 14:55:30:977] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:31:102] (Tuner) Tuner returned 0 resistance for note 1244.51
+[2016/04/20 14:55:31:108] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:31:114] (Tuner) Tuner returned 0 resistance for note 1244.51
+[2016/04/20 14:55:31:122] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:31:128] (Tuner) Tuner returned 0 resistance for note 1244.51
+[2016/04/20 14:55:31:133] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:31:139] (Tuner) Tuner returned 0 resistance for note 1244.51
+[2016/04/20 14:55:31:144] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:31:151] (Tuner) Tuner returned 0 resistance for note 1244.51
+[2016/04/20 14:55:31:156] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:31:163] (Tuner) Tuner returned 0 resistance for note 1318.51
+[2016/04/20 14:55:31:170] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:31:176] (Tuner) Tuner returned 0 resistance for note 1318.51
+[2016/04/20 14:55:31:301] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:31:309] (Tuner) Tuner returned 0 resistance for note 1318.51
+[2016/04/20 14:55:31:317] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:31:328] (Tuner) Tuner returned 0 resistance for note 1318.51
+[2016/04/20 14:55:31:336] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:31:342] (Tuner) Tuner returned 0 resistance for note 1318.51
+[2016/04/20 14:55:31:352] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:31:359] (Tuner) Tuner returned 0 resistance for note 1318.51
+[2016/04/20 14:55:31:366] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:31:373] (Tuner) Tuner returned 0 resistance for note 1396.91
+[2016/04/20 14:55:31:380] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:31:387] (Tuner) Tuner returned 0 resistance for note 1396.91
+[2016/04/20 14:55:31:501] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:31:508] (Tuner) Tuner returned 0 resistance for note 1396.91
+[2016/04/20 14:55:31:514] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:31:522] (Tuner) Tuner returned 0 resistance for note 1396.91
+[2016/04/20 14:55:31:529] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:31:535] (Tuner) Tuner returned 0 resistance for note 1396.91
+[2016/04/20 14:55:31:542] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:31:549] (Tuner) Tuner returned 0 resistance for note 1396.91
+[2016/04/20 14:55:31:556] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:31:563] (Tuner) Tuner returned 0 resistance for note 1479.98
+[2016/04/20 14:55:31:570] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:31:576] (Tuner) Tuner returned 0 resistance for note 1479.98
+[2016/04/20 14:55:31:700] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:31:707] (Tuner) Tuner returned 0 resistance for note 1479.98
+[2016/04/20 14:55:31:714] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:31:723] (Tuner) Tuner returned 0 resistance for note 1479.98
+[2016/04/20 14:55:31:728] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:31:735] (Tuner) Tuner returned 0 resistance for note 1479.98
+[2016/04/20 14:55:31:741] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:31:746] (Tuner) Tuner returned 0 resistance for note 1479.98
+[2016/04/20 14:55:31:753] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:31:760] (Tuner) Tuner returned 0 resistance for note 1567.98
+[2016/04/20 14:55:31:769] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:31:776] (Tuner) Tuner returned 0 resistance for note 1567.98
+[2016/04/20 14:55:31:784] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:31:907] (Tuner) Tuner returned 0 resistance for note 1567.98
+[2016/04/20 14:55:31:916] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:31:927] (Tuner) Tuner returned 0 resistance for note 1567.98
+[2016/04/20 14:55:31:937] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:31:945] (Tuner) Tuner returned 0 resistance for note 1567.98
+[2016/04/20 14:55:31:954] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:31:961] (Tuner) Tuner returned 0 resistance for note 1567.98
+[2016/04/20 14:55:31:968] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:31:975] (Tuner) Tuner returned 0 resistance for note 1661.22
+[2016/04/20 14:55:31:980] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:31:988] (Tuner) Tuner returned 0 resistance for note 1661.22
+[2016/04/20 14:55:31:993] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:32:105] (Tuner) Tuner returned 0 resistance for note 1661.22
+[2016/04/20 14:55:32:115] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:32:124] (Tuner) Tuner returned 0 resistance for note 1661.22
+[2016/04/20 14:55:32:131] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:32:137] (Tuner) Tuner returned 0 resistance for note 1661.22
+[2016/04/20 14:55:32:141] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:32:146] (Tuner) Tuner returned 0 resistance for note 1661.22
+[2016/04/20 14:55:32:153] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:32:159] (Tuner) Tuner returned 0 resistance for note 1760
+[2016/04/20 14:55:32:164] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:32:170] (Tuner) Tuner returned 0 resistance for note 1760
+[2016/04/20 14:55:32:175] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:32:181] (Tuner) Tuner returned 0 resistance for note 1760
+[2016/04/20 14:55:32:303] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:32:312] (Tuner) Tuner returned 0 resistance for note 1760
+[2016/04/20 14:55:32:322] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:32:329] (Tuner) Tuner returned 0 resistance for note 1760
+[2016/04/20 14:55:32:335] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:32:339] (Tuner) Tuner returned 0 resistance for note 1760
+[2016/04/20 14:55:32:344] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:32:351] (Tuner) Tuner returned 0 resistance for note 1864.66
+[2016/04/20 14:55:32:360] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:32:370] (Tuner) Tuner returned 0 resistance for note 1864.66
+[2016/04/20 14:55:32:378] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:32:388] (Tuner) Tuner returned 0 resistance for note 1864.66
+[2016/04/20 14:55:32:507] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:32:520] (Tuner) Tuner returned 0 resistance for note 1864.66
+[2016/04/20 14:55:32:528] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:32:533] (Tuner) Tuner returned 0 resistance for note 1864.66
+[2016/04/20 14:55:32:538] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:32:545] (Tuner) Tuner returned 0 resistance for note 1864.66
+[2016/04/20 14:55:32:553] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:32:559] (Tuner) Tuner returned 0 resistance for note 1975.53
+[2016/04/20 14:55:32:564] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:32:569] (Tuner) Tuner returned 0 resistance for note 1975.53
+[2016/04/20 14:55:32:575] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:32:580] (Tuner) Tuner returned 0 resistance for note 1975.53
+[2016/04/20 14:55:32:718] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:32:736] (Tuner) Tuner returned 0 resistance for note 1975.53
+[2016/04/20 14:55:32:750] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:32:762] (Tuner) Tuner returned 0 resistance for note 1975.53
+[2016/04/20 14:55:32:772] (Tuner) Error tuning: Arduino not in tuning mode.
+[2016/04/20 14:55:32:777] (Tuner) Tuner returned 0 resistance for note 1975.53

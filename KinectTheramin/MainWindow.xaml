@@ -1,0 +1,29 @@
+﻿<Window x:Class="KinectTheramin.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="552.463" Width="1002.119" Loaded="Window_Loaded">
+    <Grid Margin="0,0,2,-21">
+        <Button x:Name="fullTuneBtn" Content="FullTune" Margin="185,0,0,42" VerticalAlignment="Bottom" Click="fullTuneBtn_Click" HorizontalAlignment="Left" Width="81"/>
+        <ProgressBar x:Name="tuningPrgbar" Margin="185,0,10,27" Height="10" VerticalAlignment="Bottom"/>
+        <Button x:Name="playModeBtn" Content="Play!" Margin="0,0,54,42" ToolTip="Switches to play mode" Click="playModeBtn_Click" HorizontalAlignment="Right" Width="35" Height="20" VerticalAlignment="Bottom" IsEnabled="False"/>
+        <GroupBox Header="Dominant Hand" Margin="10,0,0,27" VerticalAlignment="Bottom" Height="57" HorizontalAlignment="Left" Width="170">
+            <Grid>
+                <RadioButton x:Name="leftHandBtn" HorizontalAlignment="Left" Height="15" Margin="10,10,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked" Width="52" Content="Left"/>
+                <RadioButton x:Name="rightHandBtn" HorizontalAlignment="Left" Height="15" Margin="100,10,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked" Width="52" Content="Right" IsChecked="True"/>
+            </Grid>
+        </GroupBox>
+        <Button x:Name="seqBtn" Content="Sequence" Margin="0,0,10,42" Click="seqBtn_Click" HorizontalAlignment="Right" Width="39" Height="20" VerticalAlignment="Bottom" IsEnabled="False"/>
+        <Viewbox Margin="10,10,10,89">
+            <Image x:Name="Image"/>
+        </Viewbox>
+        <Button x:Name="testHandPosBtn" Content="Test" Margin="0,0,94,42" HorizontalAlignment="Right" Width="75" Height="20" VerticalAlignment="Bottom" Click="testHandPosBtn_Click"/>
+        <TextBox x:Name="keyNameTb" Margin="0,0,174,41" TextWrapping="Wrap" Height="20" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="61" Text="C Major"/>
+        <TextBox x:Name="NoteTb" Margin="0,0,280,41" TextWrapping="Wrap" Height="20" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="45" RenderTransformOrigin="1.312,0.35"/>
+        <Label Content="Key: " Margin="0,0,240,36" Height="29" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="35"/>
+        <Label Content="Note:" Margin="0,0,330,36" Height="29" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="39"/>
+        <TextBox x:Name="bpmTb" HorizontalAlignment="Left" Height="20" Margin="271,0,0,41" TextWrapping="Wrap" Text="100" VerticalAlignment="Bottom" Width="39"/>
+        <Button Content="Set BPM" HorizontalAlignment="Left" Margin="315,0,0,42" VerticalAlignment="Bottom" Width="59" Click="Button_Click"/>
+        <CheckBox x:Name="fancyHandPosChkBox" Content="Fancy Hand Position" HorizontalAlignment="Left" Margin="379,0,0,44" VerticalAlignment="Bottom" Checked="fancyHandPosChkBox_Checked"/>
+
+    </Grid>
+</Window>
